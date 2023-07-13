@@ -19,7 +19,7 @@ Clone the repository:
 `git clone https://github.com/itamey/bmi_app.git`
 
 Navigate to the project directory:
-`cd bmi-calculator`
+`cd bmi_app`
 
 Install the dependencies:
 `npm install`
