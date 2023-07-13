@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url(BMI.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f0f0f0;
+}
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; 
+  opacity: .8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .history {
+      margin-top: 20px;
+    }
+    .history table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .history th,
+    .history td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter weight">
+
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" placeholder="Enter height">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div class="result">
+      <h2>BMI Result: <span id="bmiResult"></span></h2>
+      <h2>BMI Category: <span id="bmiCategory"></span></h2>
+    </div>
+
+    <div class="history">
+      <h2>BMI History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>BMI</th>
+            <th>Category</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="historyTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var history = [];
+
+    function calculateBMI() {
+      var weightInput = document.getElementById('weight');
+      var heightInput = document.getElementById('height');
+      var bmiResultSpan = document.getElementById('bmiResult');
+      var bmiCategorySpan = document.getElementById('bmiCategory');
+      var historyTable = document.getElementById('historyTable');
+
+      var weight = parseFloat(weightInput.value);
+      var height = parseFloat(heightInput.value);
+
+      if (!isNaN(weight) && !isNaN(height)) {
+        var bmi = weight / (height * height);
+        var bmiCategory = getBMICategory(bmi);
+
+        bmiResultSpan.textContent = bmi.toFixed(2);
+        bmiCategorySpan.textContent = bmiCategory;
+
+        var currentDate = new Date();
+        var row = historyTable.insertRow(0);
+        row.insertCell(0).textContent = bmi.toFixed(2);
+        row.insertCell(1).textContent = bmiCategory;
+        row.insertCell(2).textContent = currentDate.toLocaleDateString();
+
+        history.unshift({ bmi: bmi.toFixed(2), category: bmiCategory, date: currentDate });
+
+        weightInput.value = '';
+        heightInput.value = '';
+      }
+    }
+
+    function getBMICategory(bmi) {
+      if (bmi < 18.5) {
+        return 'Underweight';
+      } else if (bmi >= 18.5 && bmi < 25.0) {
+        return 'Normal Weight';
+      } else if (bmi >= 25.0 && bmi < 30.0) {
+        return 'Overweight';
+      } else {
+        return 'Obese';
+      }
+    }
+  </script>
+</body>
+</html>
