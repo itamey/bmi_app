@@ -19,7 +19,7 @@ Clone the repository:
 `git clone https://github.com/itamey/bmi_app.git`
 
 Navigate to the project directory:
-`cd bmi-calculator`
+`cd bmi_app`
 
 Install the dependencies:
 `npm install`
@@ -44,4 +44,4 @@ Contributions to the BMI Calculator App are welcome! If you find any issues or h
 
 ## Licensing
 
-The BMI Calculator App is licensed under the MIT License. You are free to use, modify, and distribute this project as per the terms of the license.
+The BMI Calculator App is licensed under the ALX. You are free to use, modify, and distribute this project as per the terms of the license.
