@@ -1,9 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: url(/images/BMI.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: #f0f0f0;
+}
+img {
+  position: absolute;
+  height: 100%; 
+  width: 100%;
 }
 .container {
   max-width: 400px;

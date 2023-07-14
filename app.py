@@ -5,6 +5,10 @@ import datetime
 app = Flask(__name__)
 history = []
 
+@app.route('/landing', methods=['GET', 'POST'])
+def landing():
+    return render_template("landing.html"), 200
+
 @app.route('/', methods=['GET', 'POST'])
 def bmi_app():
     return render_template("bmi_app.html"), 200
