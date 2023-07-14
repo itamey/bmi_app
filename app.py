@@ -1,8 +1,13 @@
-from flask import Flask, jsonify, request
+from cgitb import html
+from flask import Flask, render_template, url_for, jsonify, request
 import datetime
 
 app = Flask(__name__)
 history = []
+
+@app.route('/', methods=['GET', 'POST'])
+def bmi_app():
+    return render_template("bmi_app.html"), 200
 
 @app.route('/bmi', methods=['POST'])
 def calculate_bmi():
@@ -12,7 +17,7 @@ def calculate_bmi():
     bmi = weight / (height * height)
     bmi_category = get_bmi_category(bmi)
 
-    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     calculation = {
         'bmi': bmi,
         'category': bmi_category,
