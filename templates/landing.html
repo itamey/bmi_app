@@ -1,60 +1,134 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BMI Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #4CAF50;
-      color: #fff;
-    }
-    .hero h1 {
-      font-size: 48px;
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .hero p {
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 48px;
-    }
-    .cta {
-      display: flex;
-      justify-content: center;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #fff;
-      color: #4CAF50;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 3px;
-      transition: background-color 0.3s ease;
-    }
-    .cta a:hover {
-      background-color: #e0e0e0;
-    }
-  </style>
-</head>
-<body>
-  <div class="hero">
-    <div class="hero-content">
-      <h1>BMI Calculator</h1>
-      <p>Track your body mass index and maintain a healthy lifestyle</p>
-      <div class="cta">
-        <a href="bmi_app.html">Get Started</a>
-      </div>
-    </div>
-  </div>
-</body>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BMI App - Landing Page</title>
+      <link rel="stylesheet" href="static/css/landing_style.css">
+      <style>
+          /* General Styles */
+          body {
+              font-family: Arial, sans-serif;
+              line-height: 1.6;
+              margin: 0;
+              padding: 0;
+          }
+
+          header {
+              background-color: #34495e;
+              color: #fff;
+              text-align: center;
+              padding: 20px;
+          }
+
+          header h1 {
+              margin: 0;
+          }
+
+          main {
+              padding: 40px;
+          }
+
+          h2 {
+              color: #2980b9;
+              margin-bottom: 20px;
+          }
+
+          p {
+              margin-bottom: 15px;
+          }
+
+          ul {
+              list-style: disc;
+              padding-left: 30px;
+          }
+
+          /* Testimonials */
+          blockquote {
+              border-left: 3px solid #2980b9;
+              padding-left: 20px;
+          }
+
+          /* Call-to-Action (CTA) */
+          .download-btn {
+              display: inline-block;
+              background-color: #2980b9;
+              color: #fff;
+              padding: 10px 20px;
+              text-decoration: none;
+              margin: 10px;
+              border-radius: 5px;
+          }
+
+          /* Footer */
+          footer {
+              background-color: #34495e;
+              color: #fff;
+              text-align: center;
+              padding: 10px;
+          }
+
+          /* Responsive Styles */
+          @media (max-width: 768px) {
+              header h1 {
+                  font-size: 24px;
+              }
+
+              main {
+                  padding: 20px;
+              }
+
+              .download-btn {
+                  font-size: 14px;
+                  padding: 8px 16px;
+              }
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1>Welcome to BMI Tracker App</h1>
+      </header>
+
+      <main>
+          <section id="hero">
+              <h2>Achieve Your Health Goals with our Comprehensive BMI Tracker</h2>
+              <p>Are you ready to take control of your health and achieve your ideal body weight? Look no further! The BMI Tracker App is here to support you on your journey towards a healthier lifestyle.</p>
+          </section>
+
+          <section id="why-choose">
+              <h2>Why Choose BMI Tracker App?</h2>
+              <ul>
+                  <li>Simple and Intuitive Interface: Our app offers a user-friendly interface that is easy to navigate, ensuring a seamless user experience for everyone.</li>
+                  <li>Accurate BMI Calculation: Get precise results by entering your height and weight, and let our advanced algorithm calculate your BMI instantly.</li>
+                  <li>Goal Setting and Tracking: Set your target weight and track your progress effortlessly. Stay motivated by seeing how far you've come and how close you are to reaching your goals.</li>
+                  <li>Personalized Recommendations: Receive personalized recommendations based on your BMI and goals. Our app provides valuable insights on nutrition, exercise, and lifestyle adjustments to help you make informed decisions.</li>
+                  <li>Comprehensive Data Analysis: Visualize your progress with detailed charts and graphs. Gain a deeper understanding of your body composition changes and make adjustments accordingly.</li>
+                  <li>Integration with Wearable Devices: Connect your favorite fitness trackers or smartwatches to seamlessly sync your activity data with the app. Stay on top of your fitness routine effortlessly.</li>
+              </ul>
+          </section>
+
+          <section id="user-testimonials">
+              <h2>Join Thousands of Satisfied Users!</h2>
+              <p>BMI Tracker App has already helped thousands of individuals around the world achieve their health and fitness goals. Here's what our users have to say:</p>
+              <blockquote>
+                  <p>"BMI Tracker App has been an invaluable tool on my weight loss journey. It keeps me motivated and accountable. Highly recommended!" - Sarah M.</p>
+                  <p>"I love how easy it is to use the app. The personalized recommendations have been a game-changer for me. Thank you, BMI Tracker!" - John D.</p>
+              </blockquote>
+          </section>
+
+          <section id="cta">
+              <h2>Get Started Today!</h2>
+              <p>Ready to embark on your health transformation? Download BMI Tracker App now and start your journey towards a healthier you! Available for iOS and Android.</p>
+              <p>
+                  <a href="#" class="download-btn">Download Now - iOS</a>
+                  <a href="#" class="download-btn">Download Now - Android</a>
+              </p>
+          </section>
+      </main>
+
+      <footer>
+          <p>&copy; 2023 Your Company. All rights reserved.</p>
+      </footer>
+  </body>
 </html>
