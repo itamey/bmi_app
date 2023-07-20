@@ -4,9 +4,9 @@
 
 The BMI Calculator App is a web application that allows users to calculate their Body Mass Index (BMI) and track their BMI history. It provides a simple and convenient way to monitor and maintain a healthy lifestyle.
 
-Deployed Site: Link to deployed site
+Deployed Site: <http://tameysinc.tech>
 
-Final Project Blog Article: [Link to blog article](https://link.medium.com/c1ekwJNyABb)
+Final Project Blog Article: <https://link.medium.com/c1ekwJNyABb>
 
 Author(s) LinkedIn: <https:linkedin.com/in/shalom-eyo>
 Author(s) Github: <https:github.com/itamey>
