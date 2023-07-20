@@ -6,7 +6,7 @@ The BMI Calculator App is a web application that allows users to calculate their
 
 Deployed Site: Link to deployed site
 
-Final Project Blog Article: Link to blog article
+Final Project Blog Article: [Link to blog article](https://link.medium.com/c1ekwJNyABb)
 
 Author(s) LinkedIn: <https:linkedin.com/in/shalom-eyo>
 Author(s) Github: <https:github.com/itamey>
