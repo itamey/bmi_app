@@ -68,6 +68,24 @@
               padding: 10px;
           }
 
+          .cta {
+            display: flex;
+            justify-content: center;
+          }
+          .cta a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #34495e;
+            color: #4CAF50;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+          }
+          .cta a:hover {
+            background-color: #1c6c72;
+          }
+
           /* Responsive Styles */
           @media (max-width: 768px) {
               header h1 {
@@ -91,6 +109,7 @@
       </header>
 
       <main>
+          <img src="{{ url_for('static', filename='images/dumbbell.jpg') }}">
           <section id="hero">
               <h2>Achieve Your Health Goals with our Comprehensive BMI Tracker</h2>
               <p>Are you ready to take control of your health and achieve your ideal body weight? Look no further! The BMI Tracker App is here to support you on your journey towards a healthier lifestyle.</p>
@@ -102,33 +121,32 @@
                   <li>Simple and Intuitive Interface: Our app offers a user-friendly interface that is easy to navigate, ensuring a seamless user experience for everyone.</li>
                   <li>Accurate BMI Calculation: Get precise results by entering your height and weight, and let our advanced algorithm calculate your BMI instantly.</li>
                   <li>Goal Setting and Tracking: Set your target weight and track your progress effortlessly. Stay motivated by seeing how far you've come and how close you are to reaching your goals.</li>
-                  <li>Personalized Recommendations: Receive personalized recommendations based on your BMI and goals. Our app provides valuable insights on nutrition, exercise, and lifestyle adjustments to help you make informed decisions.</li>
+                 <!-- <li>Personalized Recommendations: Receive personalized recommendations based on your BMI and goals. Our app provides valuable insights on nutrition, exercise, and lifestyle adjustments to help you make informed decisions.</li>
                   <li>Comprehensive Data Analysis: Visualize your progress with detailed charts and graphs. Gain a deeper understanding of your body composition changes and make adjustments accordingly.</li>
-                  <li>Integration with Wearable Devices: Connect your favorite fitness trackers or smartwatches to seamlessly sync your activity data with the app. Stay on top of your fitness routine effortlessly.</li>
+                  <li>Integration with Wearable Devices: Connect your favorite fitness trackers or smartwatches to seamlessly sync your activity data with the app. Stay on top of your fitness routine effortlessly.</li> -->
               </ul>
           </section>
 
-          <section id="user-testimonials">
+          <!--<section id="user-testimonials">
               <h2>Join Thousands of Satisfied Users!</h2>
               <p>BMI Tracker App has already helped thousands of individuals around the world achieve their health and fitness goals. Here's what our users have to say:</p>
               <blockquote>
                   <p>"BMI Tracker App has been an invaluable tool on my weight loss journey. It keeps me motivated and accountable. Highly recommended!" - Sarah M.</p>
                   <p>"I love how easy it is to use the app. The personalized recommendations have been a game-changer for me. Thank you, BMI Tracker!" - John D.</p>
               </blockquote>
-          </section>
+          </section>-->
 
           <section id="cta">
               <h2>Get Started Today!</h2>
-              <p>Ready to embark on your health transformation? Download BMI Tracker App now and start your journey towards a healthier you! Available for iOS and Android.</p>
-              <p>
-                  <a href="#" class="download-btn">Download Now - iOS</a>
-                  <a href="#" class="download-btn">Download Now - Android</a>
-              </p>
+              <p>Ready to embark on your health transformation? Use BMI Tracker App now and start your journey towards a healthier you!</p>
+              <div class="cta">
+                <a href="bmi_app.html">Get Started</a>
+              </div>
           </section>
       </main>
 
       <footer>
-          <p>&copy; 2023 Your Company. All rights reserved.</p>
+          <p>&copy; 2023 TAMEYSINCDOTTECH. All rights reserved.</p>
       </footer>
   </body>
 </html>
